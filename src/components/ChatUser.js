@@ -7,7 +7,7 @@ class ChatUser extends Component{
         return(
             <div className="container">
                 <h5 className="text-center">Chatting with: User Name</h5>
-                <ul class="list-group">
+                <ul className="list-group">
                     <OtherUserChatItem/>
                     <SelfChatItem/>
                     <OtherUserChatItem/>
@@ -16,9 +16,9 @@ class ChatUser extends Component{
                     <SelfChatItem/>
                 </ul>
                 <div className="row" style={{padding: '10px'}}>
-                    <label for="comment">Message:</label>
-                    <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
-                    <button type="submit" class="btn btn-primary" style={{margin: '10px 0'}}>Submit</button>
+                    <label>Message:</label>
+                    <textarea className="form-control" rows="3" id="comment" name="text"></textarea>
+                    <button type="submit" className="btn btn-primary" style={{margin: '10px 0'}}>Submit</button>
                 </div>
             </div>
         );

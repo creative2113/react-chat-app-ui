@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import pic1 from '../images/pic1.jpg'
 
-class HomeUser extends Component {
-    render() {
-        return (
-            <div className="home-user">
-                <img className="img-user" src={pic1} alt="User Image"/>
-                <div className="home-name-label">
-                    <label>User Name, Age</label><br/>
-                    <label>Location</label>
-                </div>
+const HomeUser=(props)=>{
+    return (
+        <div className="home-user">
+            <img className="img-user" src={props.user.profile} alt="User Image"/>
+            <div className="home-name-label">
+                <label>{props.user.name}, {props.user.age}y</label><br/>
+                <label>{props.user.location}</label>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default HomeUser;

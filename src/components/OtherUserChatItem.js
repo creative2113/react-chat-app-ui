@@ -7,7 +7,7 @@ class OtherUserChatItem extends Component{
             <div className="chat-container">
                 <img src={userPic} alt="Avatar" width="60px" height="60px"/>
                 <p>Hello. How are you today?</p>
-                <span class="time-right">11:00</span>
+                <span className="time-right">11:00</span>
             </div>
         );
     }
