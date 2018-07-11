@@ -1,4 +1,4 @@
-import { GET_ALL_USER, GET_MATCHED_USER, GET_CHATS, LIKE, DISLIKE } from '../actions/userAction';
+import { GET_ALL_USER, GET_MATCHED_USER, GET_CHATS, UPDATE_CHAT, LIKE, DISLIKE } from '../actions/userAction';
 
 const initialState = {
     users: [],
@@ -23,6 +23,11 @@ export default function (state = initialState, action) {
                 ...state,
                 chats: action.payload
             };
+        case UPDATE_CHAT:
+            return {
+                ...state,
+                chats: action.payload
+            }
     }
 
     return state;

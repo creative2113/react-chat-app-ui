@@ -36,6 +36,13 @@ export function getChats(){
     }
 }
 
+export function updateChat(userChats){
+    console.log("updateChat", userChats)
+    return function(dispatch){
+        dispatch({type: UPDATE_CHAT, payload: userChats});
+    }
+}
+
 export function likeUser(payload){
     return{type: LIKE, payload: payload};
 }
@@ -49,6 +56,7 @@ export const GET_MATCHED_USER="GET_MATCHED_USER";
 export const GET_CHATS="GET_CHATS";
 export const LIKE="LIKE";
 export const DISLIKE="DISLIKE";
+export const UPDATE_CHAT="UPDATE_CHAT";
 const URL_GET_USER="http://www.json-generator.com/api/json/get/cfMwRiaZgy?indent=2";
 const URL_MATCHED_USER="http://www.json-generator.com/api/json/get/cgpcGFhbiq?indent=2";
-const URL_GET_CHATS="http://www.json-generator.com/api/json/get/bTHWoQEgfC?indent=2";
+const URL_GET_CHATS="http://www.json-generator.com/api/json/get/bVbxbVjIGG?indent=2";
