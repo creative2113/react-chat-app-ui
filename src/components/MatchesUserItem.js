@@ -10,7 +10,7 @@ const MatchesUserItem=(props)=>{
     }
 
     return (
-        <div className="card list-group-item" style={{ height: '80px', margin: '5px' }}>
+        <div className="maches-user-item card list-group-item">
             <div className="d-flex justify-content-between">
                 <div className="d-flex">
                     <img className="img-user-profile" src={props.user.profile} alt="User Image" width="60px" height="60px"/>

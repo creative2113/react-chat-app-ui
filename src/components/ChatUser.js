@@ -6,7 +6,7 @@ class ChatUser extends Component{
     render(){
         return(
             <div className="container">
-                <h5 className="text-center">Chatting with: User Name</h5>
+                <h5 className="text-center">Chatting with: Jhon Doe</h5>
                 <ul className="list-group">
                     <OtherUserChatItem/>
                     <SelfChatItem/>

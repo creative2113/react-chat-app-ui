@@ -9,7 +9,7 @@ class Home extends Component {
     render() {
         return (
             <div className="container">
-                <div className="flex-row row">
+                <div className="flex-row row justify-content-center">
                     {
                         this.props.userData.users && 
                         this.props.userData.users.map((item, index) => {

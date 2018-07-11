@@ -9,6 +9,10 @@ class MatchesUserList extends Component{
         this.props.getMatchedUsers();
     }
 
+    chatWithUser=(user)=>{
+        
+    }
+
     render(){
         console.log("render", this.props.userData)
         return(

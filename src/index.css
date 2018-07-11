@@ -126,3 +126,11 @@ body {
   color: blue;
   text-decoration: underline;
 }
+
+.maches-user-item{
+  height: 80px; 
+  margin: 5px;
+}
+.maches-user-item:hover{
+  background-color: #e1e1e1
+}
