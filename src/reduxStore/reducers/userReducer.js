@@ -1,8 +1,9 @@
-import { GET_ALL_USER, GET_MATCHED_USER, LIKE, DISLIKE } from '../actions/userAction';
+import { GET_ALL_USER, GET_MATCHED_USER, GET_CHATS, LIKE, DISLIKE } from '../actions/userAction';
 
 const initialState = {
     users: [],
-    matchedUsers: []
+    matchedUsers: [],
+    chats: []
 };
 
 export default function (state = initialState, action) {
@@ -16,6 +17,11 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 matchedUsers: action.payload
+            };
+        case GET_CHATS:
+            return {
+                ...state,
+                chats: action.payload
             };
     }
 
