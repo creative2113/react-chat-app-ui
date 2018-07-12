@@ -28,6 +28,16 @@ export default function (state = initialState, action) {
                 ...state,
                 chats: action.payload
             }
+        case LIKE:
+            return {
+                ...state,
+                users: action.payload
+            }
+        case DISLIKE:
+            return {
+                ...state,
+                users: action.payload
+            }
     }
 
     return state;

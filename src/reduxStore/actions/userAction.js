@@ -37,18 +37,15 @@ export function getChats(){
 }
 
 export function updateChat(userChats){
-    console.log("updateChat", userChats)
-    return function(dispatch){
-        dispatch({type: UPDATE_CHAT, payload: userChats});
-    }
+    return {type: UPDATE_CHAT, payload: userChats}
 }
 
-export function likeUser(payload){
-    return{type: LIKE, payload: payload};
+export function likeUser(users){
+    return{type: LIKE, payload: users};
 }
 
-export function dislikeUser(payload){
-    return{type: DISLIKE, payload: payload};
+export function dislikeUser(users){
+    return{type: DISLIKE, payload: users};
 }
 
 export const GET_ALL_USER="GET_ALL_USER";

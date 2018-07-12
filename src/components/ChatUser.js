@@ -47,7 +47,7 @@ class ChatUser extends Component{
                 {
                         this.props.userChat.chats && 
                         this.props.userChat.chats.map((item, index) => {
-                            if(item.from=="Ram Charan"){
+                            if(item.from==="Ram Charan"){
                                 return <SelfChatItem key={index} userChat={item} />
                             }else{
                                 return <OtherUserChatItem key={index} userChat={item}/>

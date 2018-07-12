@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import userPic from '../images/ic_female.png'
+import React from 'react';
 
 const OtherUserChatItem=(props)=>{
     return(

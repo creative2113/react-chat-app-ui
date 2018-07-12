@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const MatchesUserItem=(props)=>{
     const renderStatus=(status)=>{
-        if(status=="Online"){
+        if(status==="Online"){
             return <label style={{color: 'blue'}}>{status}</label>
         }else{
             return <label style={{color: 'grey'}}>{status}</label>
