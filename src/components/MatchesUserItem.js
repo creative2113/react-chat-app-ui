@@ -9,8 +9,12 @@ const MatchesUserItem=(props)=>{
         }
     }
 
+    const clickToChat=()=>{
+        props.chatWithUser(props.user);
+    }
+
     return (
-        <div className="maches-user-item card list-group-item">
+        <div onClick={clickToChat} className="maches-user-item card list-group-item">
             <div className="d-flex justify-content-between">
                 <div className="d-flex">
                     <img className="img-user-profile" src={props.user.profile} alt="User Image" width="60px" height="60px"/>

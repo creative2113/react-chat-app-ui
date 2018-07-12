@@ -2,19 +2,27 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import MatchesUserItem from './MatchesUserItem';
 import {getMatchedUsers} from '../reduxStore/actions/userAction';
+import {Redirect} from 'react-router-dom';
 
 class MatchesUserList extends Component{
-
+    constructor(props){
+        super(props);
+        this.state={
+            isChatClicked: false
+        }
+    }
     componentDidMount(){
         this.props.getMatchedUsers();
     }
 
     chatWithUser=(user)=>{
-        
+        this.setState({isChatClicked: true});
     }
 
     render(){
-        console.log("render", this.props.userData)
+        if(this.state.isChatClicked){
+            return <Redirect to="/chat" />
+        }
         return(
             <div className="container">
                 <h5 className="text-center">Users you have been matched with.</h5>
@@ -22,7 +30,7 @@ class MatchesUserList extends Component{
                 {
                     this.props.userData.users &&
                     this.props.userData.users.map((item, index)=>{
-                        return <MatchesUserItem key={index} user={item} />
+                        return <MatchesUserItem chatWithUser={this.chatWithUser} key={index} user={item} />
                     })
                 }
                 </ul>
