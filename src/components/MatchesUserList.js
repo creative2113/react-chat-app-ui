@@ -4,7 +4,7 @@ import MatchesUserItem from './MatchesUserItem';
 import {getMatchedUsers} from '../reduxStore/actions/userAction';
 import {Redirect} from 'react-router-dom';
 
-class MatchesUserList extends Component{
+export class MatchesUserList extends Component{
     constructor(props){
         super(props);
         this.state={
