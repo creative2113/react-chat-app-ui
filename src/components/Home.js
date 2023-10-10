@@ -7,13 +7,13 @@ import NoUserCard from './NoUserCard';
 class Home extends Component {
 
     render() {
-        let isNoUser=this.props.userData.users && this.props.userData.users.length == 0;
+        let isNoUser=this.props.users && this.props.users.length == 0;
         return (
             <div className="container">
                 <div className="flex-row row justify-content-center">
                     {
-                        this.props.userData.users && 
-                        this.props.userData.users.map((item, index) => {
+                        this.props.users && 
+                        this.props.users.map((item, index) => {
                             return <HomeUserCard likeUser={this.likeUser} dislikeUser={this.dislikeUser} key={index} user={item} />
                         })
                     }
@@ -26,17 +26,17 @@ class Home extends Component {
     }
 
     likeUser=(user)=>{
-        this.props.userData.users.splice(this.props.userData.users.indexOf(user), 1);
+        this.props.users.splice(this.props.users.indexOf(user), 1);
         let userData={
-            users: this.props.userData.users
+            users: this.props.users
         };
         this.props.likeUser(userData);
     }
 
     dislikeUser=(user)=>{
-        this.props.userData.users.splice(this.props.userData.users.indexOf(user), 1);
+        this.props.users.splice(this.props.users.indexOf(user), 1);
         let userData={
-            users: this.props.userData.users
+            users: this.props.users
         };
         this.props.likeUser(userData);
     }
@@ -47,7 +47,7 @@ class Home extends Component {
 }
 
 const mapStatetoProps = (state) => ({
-    userData: state.userReducer.users
+    users: state.userReducer.users
 });
 
 const mapDispatchToProps = (dispatch) => ({
