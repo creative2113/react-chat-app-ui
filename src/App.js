@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Home from './components/Home';
+import NavHeader from './components/NavHeader';
 import { Provider } from 'react-redux';
 import reduxStore from './reduxStore/configureReduxStore';
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -11,7 +13,8 @@ class App extends Component {
       <Provider store={reduxStore()}>
         <Router>
           <div>
-            Hello world!
+            <NavHeader />
+            <Route exact path="/" component={Home} />
           </div>
         </Router>
       </Provider>
