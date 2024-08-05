@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from './components/Home';
+import MatchesUserList from './components/MatchesUserList';
+import ChatUser from './components/ChatUser';
 import NavHeader from './components/NavHeader';
 import { Provider } from 'react-redux';
 import reduxStore from './reduxStore/configureReduxStore';
@@ -15,6 +17,8 @@ class App extends Component {
           <div>
             <NavHeader />
             <Route exact path="/" component={Home} />
+            <Route path="/users" component={MatchesUserList} />
+            <Route path="/chat" component={ChatUser} />
           </div>
         </Router>
       </Provider>
